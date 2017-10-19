@@ -83,8 +83,10 @@ public class ConnectionFactory {
         double vAT = sale.getVAT();
         
         String sqlSale = "INSERT INTO good_sale (sale_date, sale_good_code, sale_quantity, VATFromSale)"
-                + " VALUES ('" + date + "', " +"'" + code + "', " + "'" + quantity + "', " + "'" + vAT + "');";
-        sqlStatement(sqlSale);
+                + " VALUES ('" + date + "', " +"'" + code + "', " + "'" + 1 + "', " + "'" + vAT + "');";
+        for(int i = 0; i < quantity; i++){
+            sqlStatement(sqlSale);
+        }
     }
     
 }
