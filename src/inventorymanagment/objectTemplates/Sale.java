@@ -22,7 +22,7 @@ public class Sale {
     private double VAT;
 
     public Sale(String sDate, String code, int quantity, double VAT) throws ParseException {
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yy", Locale.ENGLISH);
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yy", Locale.ENGLISH);
         this.date = new java.sql.Date(format.parse(sDate).getTime());
         this.code = code;
         this.quantity = quantity;

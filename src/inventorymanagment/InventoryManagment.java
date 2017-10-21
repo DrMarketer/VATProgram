@@ -8,6 +8,7 @@ package inventorymanagment;
 import inventorymanagment.objectTemplates.ConnectionFactory;
 import inventorymanagment.objectTemplates.Goods;
 import inventorymanagment.objectTemplates.GoodsInput;
+import inventorymanagment.objectTemplates.ReadFromFile;
 import inventorymanagment.objectTemplates.Sale;
 import java.text.ParseException;
 
@@ -24,12 +25,13 @@ public class InventoryManagment {
      */
     public static void main(String[] args) throws ParseException {
         // TODO code application logic here
-        Goods good = new Goods("B6");
-        GoodsInput gi = new GoodsInput(good,3,5,2.5);
+        //Goods good = new Goods("B6");
+        //GoodsInput gi = new GoodsInput(good,3,5,2.5);
         //ConnectionFactory.inputGoods(gi);
-        Sale sale = new Sale("20/10/17", "A3", 3, 2.2);
-        ConnectionFactory.inputSales(sale);
-        
+        //Sale sale = new Sale("20/10/17", "A3", 3, 2.2);
+        //ConnectionFactory.inputSales(sale);
+        //ReadFromFile.readTxtFileToInDb();
+        ReadFromFile.readTxtFileToSaleDb();
     
         
     }
